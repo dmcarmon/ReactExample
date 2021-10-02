@@ -3,8 +3,8 @@ import "./styles/WeatherCard.css";
 
 class WeatherCard extends Component {
   render() {
-    const { date, location, weather } = this.props;
-    if (date) {
+    const { date, location, weather, hidden } = this.props;
+    if (date && !hidden) {
       let weatherClass = "sunny";
       if (weather === "Rainy") {
         weatherClass = "rainy";
@@ -24,7 +24,7 @@ class WeatherCard extends Component {
         </div>
       );
     }
-    return <div></div>;
+    return <div key={date + location}></div>;
   }
 }
 

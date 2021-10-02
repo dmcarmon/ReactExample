@@ -1,5 +1,6 @@
 .editable-section {
   display: flex;
+  flex-wrap: wrap; /* The weather cards were scrolling off the screen to the right, so I made them wrap */
   border-radius: 15px;
   background-color: skyblue;
 }
